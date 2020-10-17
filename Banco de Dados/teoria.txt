@@ -1,0 +1,53 @@
+Conceitos básicos
+
+dado - fato do mundo real registrado
+
+informação - fato útil que pode ser extraído direta ou indiretamente a partir de dados
+
+banco de dados - "coleção de dados inter-relacionados e persistentes (pois são salvos em algum lugar), representando informações sobre um domínio específico"
+
+exemplos básicos: lista telefonica, catálogos, estoque, vendas (nao necessariamente uma coisa informatizada é um banco de dados)
+
+Tipos de bancos de dados:
+
+- antigamente: sistemas de arquivos convencional (filers, tags, boxes with information) - tudo bem mais difícil de organizar e gerar informação
+
+- sistemas de arquivos computacional:
+    .similar ao convencional, utiliza estrutura de pastas e arquivos para armazenar informacoers
+    .os dados eram mantidos em um arquivo de forma sequencial
+    .exemplo: um arquivo armazenava os dados de clientes e outros dados de vendas
+    .problemas: acesso, - não é - tolerante à falhas, redundância de dados, segurança, limitações
+    . planilhas com estrutura básica, tipo excel
+
+- modelo hierárquico
+    . década de 1960
+    . avanço na área de armazenamento de dados, com possibilidade de reácão
+    . estrutura em forma de árvore, possibilitando ligações entre registros
+    . cada registro podia ter 'varios filhos, porém apenas um partir
+    . problemas: não tenho como chegar em um filho sem passar por todos os outros e era um problema com grandes massas de dados - lentidão
+
+- modelo de rede
+    . tentativa de melhorar o modelo herarquivo
+    . estrutura em forma de arvore que  permitia um registro de varios pais diferentes
+    . pra chegar em determinado filho ainda tinha que passar por todos os pais
+
+- modelo relacional (que usamos ate hoje em muitos lugares)
+    . criado com base na teoria matemartica de conjuntos por edgar frank codd
+    . estruturado em tabelas (relacao) que podem relacionar-se entre si 
+    .permite consultas que nao foram previstas por quem projetou o BD
+    .pode ser utilizado por varias aplicacoes diferentes - varios usuarios podem se comunicar ao mesmo tempo
+    .padrao ACID
+     - acid eh o principio da transcao
+        A: atomicidade - unidade logica atomica (ou tudo ou nada)
+        C: consistencia (preservacao) - ao final de uma transacao o banco continua consistente
+        I: isolamento - a exercucao de uma transacao nao deve sofrer interfererencia de outras transacoes concorrentes
+        C: durabilidade (persistencia) - após o ponto de confirmascao, as alteracoes devem permitir no banco de dados
+
+- modelo não relacional
+    . final dos anos 2000
+    . suporta grandes volumes de dados
+    . estrutura não definida, não limita os campos - os registros não tem limitação de estrutura definida
+    . escabilidade - por suportas grandes volumes de dados sao bons para fazer consultas grandes. tipo um google, que jamais conseguiria fazer uma consulta por meio do modelo relacional
+    . tipos de armazenamento mais utilizados: Banco de Documentos (JSON) e Chave-Valor(pode ser numero,s tring, JSON).
+    . um JSON é uma estrutura de notacao de objetos no JavaScript: consigo escrever objeto, stray, array, string, float, booleano
+    . JSON é uma linguagem universal: eh lido por javascript, java, php, python, etc
