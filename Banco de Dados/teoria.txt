@@ -50,4 +50,44 @@ Tipos de bancos de dados:
     . escabilidade - por suportas grandes volumes de dados sao bons para fazer consultas grandes. tipo um google, que jamais conseguiria fazer uma consulta por meio do modelo relacional
     . tipos de armazenamento mais utilizados: Banco de Documentos (JSON) e Chave-Valor(pode ser numero,s tring, JSON).
     . um JSON é uma estrutura de notacao de objetos no JavaScript: consigo escrever objeto, stray, array, string, float, booleano
-    . JSON é uma linguagem universal: eh lido por javascript, java, php, python, etc
+    . JSON é uma linguagem universal: eh lido por javascript, java, php, python, etc: nao eh um banco de dados, mas uma estrutura universal para se apresentar um banco de dados
+    . chave-valor: chaves representam qualquer valor, não importa o tipo. pode ser string, pode ser um objeto, um próprio JSON 
+
+- SGBD : sistema de gerenciamento e manipulação de banco de dados 
+    - podem ter vartios bancos de dadosL oracle, postgreSQL, DB2m, mySQL, SQLServer 
+    . principais objetos de um SGDB:
+        ESQUEMAS - pacotes onde coloco tabelas ex: pacote de seguranca com tabela de usuario, perfil de usuario, votacao de usuario. 
+        TABELAS - onde de fato ficam os dados
+        VISOES - consulta ja pré-definida que ja fica definida como uma tabela
+        INDICES
+        USUARIOS E PAPEIS
+        PROCEDIMENTOS ARMAZENADOS (stored procedures, functions and triggers) - códigos dentro de bancos de dados 
+
+    estrutura
+        tabelas: entidade ou relacao - eh um conjunto de dados com um numero determinado de colunas euim numero infinito de linhas
+        colunas: atributos - as colunas sao os campos, ou seja, os nomes que representam os dados ARMAZENADOS
+        linhas: tuplas ou registros - é o registro que contém os dados de cada campo da tabela
+
+
+Projeto de Banco de Dados : os passos que devemos seguir ao criar um banco de dados. é uma boa prática
+
+    - modelo conceitual
+        . independente do tipo de banco de dados: tem que servir para qualquer um pq é apenas conceitual
+        . diagrama da visao geral do negocio
+        . independente da tecnologia usada para o banco de dados
+        . facilidade de entendimento entre usuários e desenvolvedores
+        . possui as entidades e relacionamentos
+
+            
+            + informacoes sobre modelo conceitual
+            - trabalhamos com requisitos e regras de negocio do dominio do problema
+            - nao nos preocupamos com aspectos fisicos do banco ou tecnologia
+            - o dominio deve ser bem delimitado pois estabelece a fronteira do que deve estar no banco de dados e o que nao deve
+    - modelo lógico
+        . diagrama mais completo
+        . possui entidades associativas no lugar de relacionamentos (entidades precisam ou nao uma da outra, padrao, associacao)
+        . define as chaves primarias 
+    - modelo físico
+        . depende da tecnologia escolhida (SGBD)
+        . possui tabelas e colunas fíusicas
+        . utiliza o SQL, a linguagem padrao para manipular a estrutura de dados em bancos relacionais
