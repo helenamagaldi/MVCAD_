@@ -9,3 +9,9 @@ lista_mista = [1, 'helena', lista_numeros]
 print(lista_mista)
 
 print(lista_numeros[1])
+
+print(len(lista_mista))
+
+print(lista_mista.count('helena'))
+
+
